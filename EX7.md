@@ -1,15 +1,12 @@
 # EX 7: Implementation of B-Tree Indexing
-
 ### AIM: 
 To implement B-tree indexing and to search an element in the B-tree using python. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   **DATE :** 08.08.2023  
-
 ### ALGORITHM:
 1. Starting from the root node, compare k with the first key of the node.<br>
 2. If k = the first key of the node, return the node and the index.<br>
 3. If k.leaf=true, return NULL.If k<the first key of the root node,search the left child of this key recursively.<br>
 4. If there is more than one key in the current node and k>the first key,compare k with the next key in the node.If k<next key,search the left child of this key(ie. k lies in between first and second keys).Else,search the right child of the key.<br>
 5. Repeat steps 1 to 4 until the leaf is reached.<br>
-  
 ### PROGRAM:
   
 ```Python
@@ -23,8 +20,8 @@ class BTreeNode:
 # Tree
 class BTree:
   def __init__(self, t):
-    self.root = BTreeNode(True)
-    self.t = t
+    self.root = BTreeNode(True)                                 Developed By: ROHIT JAIN D
+    self.t = t                                                  Register No: 212222230120
 # Insert node
   def insert(self, k):
     root = self.root
